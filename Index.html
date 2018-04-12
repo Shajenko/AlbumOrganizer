@@ -11,17 +11,17 @@
 
 </head>
 <body onload="initialize()">
-    <table align="center" width="100%" cellspacing="5" cellpadding="5px">
-      <tbody>
-        <tr>
-          <td width="20%"><a class="navbar-brand" href="./Index.html">Album Organizer</a></td>
-          <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./About">About</a> | <a href="./Contact">Contact</a></td>
-        </tr>
-      </tbody>
+    <table align="center" width="100%" xcellspacing="5" cellpadding="5px">
+        <tbody>
+            <tr>
+                <td width="20%"><a class="navbar-brand" href="./Index.html">Album Organizer</a></td>
+                <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./About">About</a> | <a href="./Contact">Contact</a></td>
+            </tr>
+        </tbody>
     </table>
 
-	<br>
-    
+    <br>
+
 
     <div id="TitleContent" style="text-align: center">
         <a href="./Index.html">
@@ -34,42 +34,58 @@
 
     <!-- Tab Links-->
     <div class="tab">
-        <button class="tablinks" onclick="openTool(event, 'SongList')" id="defaultOpen">Song Titles </button>
+        <button class="tablinks" onclick="openTool(event, 'FullSongList')" id="defaultOpen">Song Titles </button>
     </div>
 
     <!-- Tab Content-->
-    <div id="SongList" class="tabcontent">
+    <div id="FullSongList" class="tabcontent">
         <h3>Song Titles</h3>
 
-        <div name ="TitleAddDiv" style="vertical-align: top">
-            <table align="left" width="100%" style="border:none">
-                <tr >
+        <div name="TitleAddDiv" style="vertical-align: top">
+            <table align="left" style="border:none">
+                <tr>
                     <td>Add Title to List</td>
                 </tr>
                 <tr>
-                    <td width="25%" valign="top">
-                        <textarea id="SongName" rows="1" cols="42">Enter Name</textarea>
+                    <td width="27%" valign="top">
+                        Song Name
                     </td>
                     <td width="5%" valign="top">
-                        <textarea id="SongMin" rows="1" cols="5">Minutes</textarea>
+                        Minutes
                     </td>
                     <td width="5%" valign="top">
-                        <textarea id="SongSec" rows="1" cols="5">Seconds</textarea>
+                        Seconds
                     </td>
-                    <td width="5%" valign="top">
-                        <textarea id="SongBPM" rows="1" cols="5">Beats Per Minute</textarea>
+                    <td width="20%" valign="top">
+                        Beats Per Minute
                     </td>
-                    <td width="65%" valign="top">
+                    <td> <div></div></td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <textarea id="SongName" rows="1" cols="25"></textarea>
+                    </td>
+                    <td valign="top">
+                        <textarea id="SongMin" rows="1" cols="4"></textarea>
+                    </td>
+                    <td valign="top">
+                        <textarea id="SongSec" rows="1" cols="5"></textarea>
+                    </td>
+                    <td valign="top">
+                        <textarea id="SongBPM" rows="1" cols="13"></textarea>
+                    </td>
+                    <td valign="top">
                         <button id="AddSong" class="StdButton" onclick="AddSong()">Add Song</button>
                     </td>
                 </tr>
             </table>
         </div>
-        <div id="SongList" style="vertical-align: top">
-            <!-- filled by Javascript -->
+
+        <div id="ListOfSongs" style="vertical-align: top">
+                    <!-- filled by Javascript -->
         </div>
 
-    </div>
+</div>
 
     <script>
         // Get the element with id="defaultOpen" and click on it

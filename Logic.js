@@ -94,10 +94,10 @@ function writeSongs()
     outputString += "<table width=\"100%\">"
 
     outputString += "<tr>";
-    outputString += "<td width=\"20%\"> Song Name </td>";
-    outputString += "<td width=\"10%\" align=\"center\"> Minutes</td > ";
-    outputString += "<td width=\"10%\" align=\"center\"> Seconds</td>";
-    outputString += "<td width=\"10%\" align=\"center\"> Beats per Minute</td>";
+    outputString += "<td width=\"27%\"> Song Name </td>";
+    outputString += "<td width=\"5%\" align=\"center\">Minutes</td > ";
+    outputString += "<td width=\"5%\" align=\"center\">Seconds</td>";
+    outputString += "<td width=\"20%\" align=\"center\">Beats per Minute</td>";
     outputString += "<td> Delete Entry</td>";
     outputString += "</tr>";
 
@@ -106,12 +106,13 @@ function writeSongs()
     for (i = 0; i < SongList.length; i++) {
         outputString += "<tr>";
         outputString += "<td width=\"20%\">" + SongList[i].name + "</td>";
-        outputString += "<td align=\"center\">" + SongList[i].minutes + "</td > ";
-        outputString += "<td align=\"center\">" + SongList[i].seconds + "</textarea>" + "</td>";
-        outputString += "<td align=\"center\">" + SongList[i].bpm + "</td > ";
+        outputString += "<td align=\"center\">" + SongList[i].minutes + "</td >";
+        outputString += "<td align=\"center\">" + SongList[i].seconds + "</td>";
+        outputString += "<td align=\"center\">" + SongList[i].bpm + "</td >";
         outputString += "<td>" + "<button name=\"" + SongList[i].name + "Delete\" onclick=\"Delete(" + i + ")\">X</button>" + "</td>";
         outputString += "</tr>";
     }
     outputString += "</table>";
-    document.getElementById("SongList").innerHTML = outputString;
+
+    document.getElementById("ListOfSongs").innerHTML = outputString;
 }
