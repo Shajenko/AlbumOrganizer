@@ -123,21 +123,31 @@
 
 
         <div id="ListOfSongs" style="vertical-align: top">
-			<?php
-			echo 'Entering table of songs <br>';
-			$no 	= 1;
-			while ($row = mysqli_fetch_array($query))
-			{
-				echo 'Row ' . $no;
-				$id  = $row['id'];
-				echo '<tr>
-						<td>'.$row['song_name'].'</td>
-						<td>'.$row['minutes'].'</td>
-						<td>'.$row['seconds'].'</td>
-						<td>'.$row['bpm'].'</td>
-					</tr>';
-				$no++;
-			}?>
+			<table width=\"100%\">
+				<th>
+				<td width=\"27%\"> Song Name </td>
+				<td width=\"5%\" align=\"center\">Minutes</td > 
+				<td width=\"5%\" align=\"center\">Seconds</td>
+				<td width=\"20%\" align=\"center\">Beats per Minute</td>
+				<td> Delete Entry</td>
+				</tr>
+
+
+				<?php
+				$no 	= 1;
+				while ($row = mysqli_fetch_array($query))
+				{
+					$id  = $row['id'];
+					echo '<tr>
+							<td>'.$row['song_name'].'</td>
+							<td>'.$row['minutes'].'</td>
+							<td>'.$row['seconds'].'</td>
+							<td>'.$row['bpm'].'</td>
+						</tr>';
+					$no++;
+				}?>
+
+			</table>
 
         </div>
 
