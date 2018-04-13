@@ -11,6 +11,40 @@
 
 </head>
 <body>
+
+<?php
+    /* Attempt MySQL server connection. Assuming you are running MySQL
+    server with default setting (user 'root' with no password) */
+
+    $link = mysqli_connect("localhost", "root", "rootroot", "mydb");
+
+    // Check connection
+    if($link === false){
+
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+
+    }
+	else {
+		//echo $link->host_info . "<br/>";
+		}
+
+
+
+	// Get records from database, put in div "ListOfSongs
+	// Prepare a select statement
+	$sql = 'SELECT * FROM songs';
+		
+	$query = mysqli_query($link, $sql);
+
+	if (!$query) {
+		die ('SQL Error: ' . mysqli_error($link));
+	}
+
+
+	// close connection
+    mysqli_close($link);
+
+?>
 	
 	
 	<table align="center" width="100%" xcellspacing="5" cellpadding="5px">
@@ -85,46 +119,8 @@
             </table>
         </div>
 
-		
-<?php
-    /* Attempt MySQL server connection. Assuming you are running MySQL
-    server with default setting (user 'root' with no password) */
-
-    $link = mysqli_connect("localhost", "root", "rootroot", "mydb");
-
-    // Check connection
-    if($link === false){
-
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-
-    }
-	else {
-		//echo $link->host_info . "<br/>";
-		}
-
-
-
-	// Get records from database, put in div "ListOfSongs
-	// Prepare a select statement
-	$sql = 'SELECT * FROM songs';
-		
-	$query = mysqli_query($link, $sql);
-
-	if (!$query) {
-		die ('SQL Error: ' . mysqli_error($link));
-	}
-
-
-	// close connection
-    mysqli_close($link);
-
-?>
-
-
-
         <div id="ListOfSongs" style="vertical-align: top">
 			<?php
-			echo 'Entering table of songs <br>';
 			$no 	= 1;
 			while ($row = mysqli_fetch_array($query))
 			{
@@ -138,7 +134,6 @@
 					</tr>';
 				$no++;
 			}?>
-
         </div>
 
 </div>
