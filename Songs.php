@@ -46,43 +46,26 @@
         <h3>Song Titles</h3>
 
         <div name="TitleAddDiv" style="vertical-align: top">
-            <table align="left" style="border:none">
-                <tr>
-                    <td>Add Title to List</td>
-                </tr>
-                <tr>
-                    <td width="27%" valign="top">
-                        Song Name
-                    </td>
-                    <td width="5%" valign="top">
-                        Minutes
-                    </td>
-                    <td width="5%" valign="top">
-                        Seconds
-                    </td>
-                    <td width="20%" valign="top">
-                        Beats Per Minute
-                    </td>
-                    <td> <div></div></td>
-                </tr>
-                <tr>
-                    <td valign="top">
-                        <textarea id="SongName" rows="1" cols="25"></textarea>
-                    </td>
-                    <td valign="top">
-                        <textarea id="SongMin" rows="1" cols="4"></textarea>
-                    </td>
-                    <td valign="top">
-                        <textarea id="SongSec" rows="1" cols="5"></textarea>
-                    </td>
-                    <td valign="top">
-                        <textarea id="SongBPM" rows="1" cols="13"></textarea>
-                    </td>
-                    <td valign="top">
-                        <button id="AddSong" class="StdButton" onclick="AddSong()">Add Song</button>
-                    </td>
-                </tr>
-            </table>
+			<p>Add Title to List</p>
+            <form action="NewSong.php" method="post">
+				<p>
+					<label for="song_name">Song Name:</label>
+					<input type="text" name="songName" id="songName">
+				</p>
+				<p>
+					<label for="minutes">Minutes:</label>
+					<input type="int" name="songMinutes" id="minutes">
+				</p>
+				<p>
+					<label for="seconds">Seconds:</label>
+					<input type="int" name="songSeconds" id="seconds">
+				</p>
+				<p>
+					<label for="beats">Beats Per Minute:</label>
+					<input type="int" name="beats" id="beats">
+				</p>
+				<input type="submit" value="Submit">
+			</form>
         </div>
 
 		
@@ -125,12 +108,11 @@
         <div id="ListOfSongs" style="vertical-align: top">
 			<table width=\"100%\">
 				<th>
-				<td width=\"27%\"> Song Name </td>
-				<td width=\"5%\" align=\"center\">Minutes</td > 
-				<td width=\"5%\" align=\"center\">Seconds</td>
-				<td width=\"20%\" align=\"center\">Beats per Minute</td>
-				<td> Delete Entry</td>
-				</tr>
+					<td width=\"27%\"> Song Name </td>
+					<td width=\"5%\" align=\"center\">Minutes</td > 
+					<td width=\"5%\" align=\"center\">Seconds</td>
+					<td width=\"20%\" align=\"center\">Beats per Minute</td>
+				</th>
 
 
 				<?php
