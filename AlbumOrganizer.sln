@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9664A0B-1AF1-4278-85AC-359DDC0737C4}"
 	ProjectSection(SolutionItems) = preProject
 		About.html = About.html
 		Contact.html = Contact.html
 		Index.html = Index.html
-		Insert.html = Insert.html
+		Index.php = Index.php
 		Insert.php = Insert.php
 		Logic.js = Logic.js
 		MainPage.css = MainPage.css
