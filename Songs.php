@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Album Organizer - Main Page</title>
+    <title>Album Organizer - Songs</title>
 
 	<script language="javascript" src="Logic.js"></script>
     <link rel="stylesheet" type="text/css" href="MainPage.css">
@@ -51,7 +51,7 @@
         <tbody>
             <tr>
                 <td width="20%"><a class="navbar-brand" href="./Index.html">Album Organizer</a></td>
-                <td width="50%" align="right"><a href="./Index.php">Home</a> | <a href="./About.html">About</a> | <a href="./Contact.html">Contact</a></td>
+                <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./Songs.php">Songs</a> | <a href="./About.html">About</a> | <a href="./Contact.html">Contact</a></td>
             </tr>
         </tbody>
     </table>

@@ -3,16 +3,16 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Album Organizer - Contact Page</title>
 	<link rel="stylesheet" type="text/css" href="MainPage.css">
 </head>
 <body>
-
-    <table align="center" width="100%" xcellspacing="5" cellpadding="5px">
+	
+	<table align="center" width="100%" xcellspacing="5" cellpadding="5px">
         <tbody>
             <tr>
                 <td width="20%"><a class="navbar-brand" href="./Index.html">Album Organizer</a></td>
-                <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./About.html">About</a> | <a href="./Contact.html">Contact</a></td>
+                <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./Songs.php">Songs</a> | <a href="./About.html">About</a> | <a href="./Contact.html">Contact</a></td>
             </tr>
         </tbody>
     </table>
